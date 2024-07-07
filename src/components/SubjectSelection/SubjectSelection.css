@@ -1,0 +1,10 @@
+.flex {
+    display: flex;
+    margin-left: 210px;
+}
+
+#coursesHeading {
+    margin-left: 200px;
+    font-size: 85px;
+}
+

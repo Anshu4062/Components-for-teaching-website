@@ -1,42 +1,25 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Screenshot from "./images/Screenshot.png"
-
-function MediaCard(props) {
-  return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 240 }}
-        image={props.image}
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small"><b>Share</b></Button>
-        <Button size="small"><b>Learn More</b></Button>
-      </CardActions>
-    </Card>
-  );
-}
+import "./SubjectSelection.css";
+import images from "../images";
+import MediaCard from "./CardComponent/CardComponent";
 
 const SubjectSelection = () => {
-    return (
-        <div>
-        <MediaCard image={Screenshot} />
-        <MediaCard image={Screenshot} />
-        </div>
-    )
-}
+  return (
+    <>
+      <h1 id="coursesHeading">Our Courses</h1>
+      <div className="flex">
+        <MediaCard image={images.history} heading="HISTORY" description="" />
+        <MediaCard image={images.chemistry} heading="CHEMISTRY" />
+        <MediaCard image={images.science} heading="SCIENCE" />
+        <MediaCard image={images.physics} heading="PHYSICS" />
+      </div>
+      <div className="flex">
+        <MediaCard image={images.computer} heading="COMPUTER SCIENCE" />
+        <MediaCard image={images.biology} heading="BIOLOGY" />
+        <MediaCard image={images.english} heading="ENGLISH" />
+        <MediaCard image={images.math} heading="MATH" />
+      </div>
+    </>
+  );
+};
 
 export default SubjectSelection;
