@@ -29,6 +29,7 @@ const InstructorInfo = () => {
 
     return () => {
       if (sectionRef.current) {
+        //eslint-disable-next-line
         observer.unobserve(sectionRef.current);
       }
     };
